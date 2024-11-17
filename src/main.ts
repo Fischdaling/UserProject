@@ -1,6 +1,9 @@
 import {addMediaToUser,filterUsersByLocation,calculateTotalAge} from "./user/user-utils";
 import {User,Media,Account,Profile} from "./user/user-models";
 
+// What are pre-commit hooks, and why are they useful?
+// pre commit hooks allow us to format and check our code automatically before commiting
+
 const mockUser:User = {
     username:"TestUser",
     profile:{
@@ -93,5 +96,3 @@ console.log(usersLivingInSameLocation);
 console.log("---------------------------------------------------------------------------------------------------------");
 const allAges:number = calculateTotalAge(userArr);
 console.log(allAges); // 58
-
-console.log(mockUser.profile)
