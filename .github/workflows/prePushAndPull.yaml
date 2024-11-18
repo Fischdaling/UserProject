@@ -8,20 +8,55 @@ on:
       - main
 jobs:
   test:
-    name: run tests
+    name: Run Tests
     runs-on: ubuntu-latest
     steps:
-      - run: npm test
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.17.0'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm test
 
   lint:
-    name: Check code
+    name: Check Code
     runs-on: ubuntu-latest
     steps:
-      - run: npm run lint
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.17.0'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Linter
+        run: npm run lint
 
   pretty:
-    name: Prettify
+    name: Prettify Code
     runs-on: ubuntu-latest
     steps:
-      - run: npm run format
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.17.0'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Format Code
+        run: npm run format
