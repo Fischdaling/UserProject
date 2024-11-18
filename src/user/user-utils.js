@@ -11,19 +11,22 @@ function addMediaToUser(user, media) {
 // Filter users by location
 function filterUsersByLocation(users, location) {
     var _a;
-    const usersInSameLocation = [];
-    for (const user of users) {
-        if (((_a = user.profile.location) === null || _a === void 0 ? void 0 : _a.trim().toLowerCase()) == location.trim().toLowerCase()) {
+    var usersInSameLocation = [];
+    for (var _i = 0, users_1 = users; _i < users_1.length; _i++) {
+        var user = users_1[_i];
+        if (((_a = user.profile.location) === null || _a === void 0 ? void 0 : _a.trim().toLowerCase()) ==
+            location.trim().toLowerCase()) {
             usersInSameLocation.push(user);
         }
     }
     return usersInSameLocation;
 }
 function calculateTotalAge(users) {
-    let totalAge = 0;
-    for (const user of users) {
+    var totalAge = 0;
+    for (var _i = 0, users_2 = users; _i < users_2.length; _i++) {
+        var user = users_2[_i];
         if (user.profile.birthdate) {
-            const age = new Date().getFullYear() - user.profile.birthdate.getFullYear();
+            var age = new Date().getFullYear() - user.profile.birthdate.getFullYear();
             totalAge += age;
         }
     }

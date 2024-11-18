@@ -1,19 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const user_utils_1 = require("./user/user-utils");
+var user_utils_1 = require("./user/user-utils");
 // What are pre-commit hooks, and why are they useful?
 // pre commit hooks allow us to format and check our code automatically before commiting
-const mockUser = {
+var mockUser = {
     username: "TestUser",
     profile: {},
     account: {
         id: "123",
-        accountStatus: "active"
+        accountStatus: "active",
     },
     email: "test@mail.com",
-    passwordHash: "asdfghjklöä"
+    passwordHash: "asdfghjklöä",
 };
-const mockUser1 = {
+var mockUser1 = {
     username: "alice",
     email: "alice@example.com",
     passwordHash: "hashedPassword123",
@@ -27,7 +27,7 @@ const mockUser1 = {
         accountStatus: "active",
     },
 };
-const mockUser2 = {
+var mockUser2 = {
     username: "bob",
     email: "bob@example.com",
     passwordHash: "hashedPassword456",
@@ -42,7 +42,7 @@ const mockUser2 = {
         accountStatus: "suspended",
     },
 };
-const mockUser3 = {
+var mockUser3 = {
     username: "carol",
     email: "carol@example.com",
     passwordHash: "hashedPassword789",
@@ -63,25 +63,25 @@ const mockUser3 = {
         accountStatus: "deleted",
     },
 };
-const userArr = [mockUser, mockUser1, mockUser2, mockUser3];
-const mockMedia = {
+var userArr = [mockUser, mockUser1, mockUser2, mockUser3];
+var mockMedia = {
     url: "URL",
     altText: "A Picture",
     metadata: {
         dimensions: {
             height: 123,
-            width: 123
+            width: 123,
         },
         format: "png",
-        size: 123
-    }
+        size: 123,
+    },
 };
 console.log("---------------------------------------------------------------------------------------------------------");
-const userWithPic = (0, user_utils_1.addMediaToUser)(mockUser, mockMedia);
+var userWithPic = (0, user_utils_1.addMediaToUser)(mockUser, mockMedia);
 console.log(userWithPic);
 console.log("---------------------------------------------------------------------------------------------------------");
-const usersLivingInSameLocation = (0, user_utils_1.filterUsersByLocation)(userArr, "LONDON");
+var usersLivingInSameLocation = (0, user_utils_1.filterUsersByLocation)(userArr, "LONDON");
 console.log(usersLivingInSameLocation);
 console.log("---------------------------------------------------------------------------------------------------------");
-const allAges = (0, user_utils_1.calculateTotalAge)(userArr);
+var allAges = (0, user_utils_1.calculateTotalAge)(userArr);
 console.log(allAges); // 58
