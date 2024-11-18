@@ -28,7 +28,10 @@
     "husky": "^9.1.6"
   },
   "lint-staged": {
-    "{src,test}/**/*.ts": ["npm run lint", "npm run format"]
+    "{src,test}/**/*.ts": [
+      "npm run lint",
+      "npm run format"
+    ]
   },
   "husky": {
     "hooks": {
