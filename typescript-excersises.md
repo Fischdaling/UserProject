@@ -208,7 +208,7 @@
 ## ESLint
 
 - **Q1.** What is a linting tool, and why do we use ESLint in this project?
-- **Q2.** What do we have a `.eslint.config.mjs` file in the project folder?
+- **Q2.** What do we have a `.eslint.config.js` file in the project folder?
 - **Q3.** What are custom rules in ESLint, and how can they help maintain code quality?
 
 ## Prettier
