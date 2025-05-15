@@ -1,0 +1,24 @@
+name: Local Docker Deployment Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  docker_test:
+    runs-on: ubuntu-latest
+    container:
+      image: node:22
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build (if necessary)
+        run: npm run build
+
+      - name: Simulate Deployment (local testing)
+        run: echo "Simulating local deployment. No actual deployment occurs."
