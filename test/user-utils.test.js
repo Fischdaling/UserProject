@@ -116,6 +116,6 @@ describe("calculate Total Age", () => {
             : 0;
         const age = age1 + age2;
         // Expect the total age calculation to match the sum of individual ages.
-        expect((0, user_utils_1.calculateTotalAge)(userArr)).toEqual(age-1);
+        expect((0, user_utils_1.calculateTotalAge)(userArr)).toEqual(age);
     });
 });
